@@ -16,7 +16,6 @@ import com.musicweb.model.dao.*;
 public class testApp {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
 		Date date = new Date(2002-12-12);
 		UserDAO dao = new UserDAO();
 		
@@ -24,16 +23,11 @@ public class testApp {
 		
 	
 		Users a = dao.insert(user);
-=======
 		UserDAO userdao = new UserDAO();
->>>>>>> 910cc13a5e2ff92f72a50090fa3fa0791a095c77
 		
 		Users uy = userdao.select(2);
-		Playlists a = new Playlists(uy, "playlix100");
 		
-		PlaylistDAO dao=new PlaylistDAO();
 		
-		dao.insert(a);
 		
 		
 //		System.out.println(ab.getName());
