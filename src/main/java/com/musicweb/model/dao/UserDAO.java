@@ -8,8 +8,8 @@ import com.musicweb.model.entity.Users;
 public class UserDAO extends HibernateDAO<Users> implements GenericDAO<Users> {
 
 	@Override
-	public Users create(Users user) {
-		return super.create(user);
+	public Users insert(Users user) {
+		return super.insert(user);
 	}
 	
 	public boolean isValidate(String account, String password) {

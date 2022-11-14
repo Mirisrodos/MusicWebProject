@@ -17,7 +17,7 @@ public class HibernateDAO<E> {
 	public HibernateDAO() {
 	}
 	
-	public E create(E entity) {
+	public E insert(E entity) {
 		Session session = null;
 		Transaction transaction = null;
 		try {
