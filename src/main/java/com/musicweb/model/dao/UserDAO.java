@@ -31,6 +31,9 @@ public class UserDAO extends HibernateDAO<Users> implements GenericDAO<Users> {
 				transaction.rollback();
 			}
 			e.printStackTrace();
+		} finally {
+			if (session != null)
+				session.close();
 		}
 		return false;
 	}

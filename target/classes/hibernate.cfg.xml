@@ -10,6 +10,9 @@
 		<property name="hibernate.connection.password">0945132289</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		
+		<!-- Connection pool -->
+		<property name="connection.pool_size">100</property>
+		
 		<!-- Show SQL -->
 		<property name="show_sql">true</property>
 
