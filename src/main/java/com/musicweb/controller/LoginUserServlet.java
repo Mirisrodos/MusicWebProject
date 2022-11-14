@@ -49,8 +49,7 @@ public class LoginUserServlet extends HttpServlet {
 
         if (loginDAO.isValidate(username, password)) {
 //        	Thêm session và các tính năng Attribute khi đăng nhập thành công
-            RequestDispatcher dispatcher = request.getRequestDispatcher("index.html");
-            dispatcher.forward(request, response);
+        	response.sendRedirect("index.html");
         } else {
 //        	Thêm các Attribute khi đăng nhập thất bại để hiện ra thông báo xác nhận là
 //        	tài khoản và mật khẩu
