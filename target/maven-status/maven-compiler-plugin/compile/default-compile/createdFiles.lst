@@ -1,0 +1,14 @@
+com\musicweb\model\dao\GenericDAO.class
+com\musicweb\model\entity\Users.class
+com\musicweb\model\entity\Playlists.class
+com\musicweb\model\dao\HibernateDAO.class
+com\musicweb\model\dao\SongDao.class
+com\musicweb\model\dao\AlbumDAO.class
+com\musicweb\controller\LoginUserServlet.class
+com\musicweb\model\dao\PlaylistDAO.class
+com\musicweb\model\dao\UserDAO.class
+com\musicweb\model\dao\SingerDAO.class
+com\musicweb\model\entity\Singers.class
+com\musicweb\model\entity\Songs.class
+com\musicweb\model\entity\Albums.class
+com\musicweb\util\HibernateUtils.class
