@@ -29,11 +29,9 @@ public class UserDAO extends HibernateDAO<Users> implements GenericDAO<Users> {
 	}
 	
 	public boolean isValidate(String account, String password) {
-		Session session = null;
 		Transaction transaction = null;
-		Users user = null;
-		try {
-			session = factory.openSession();
+		Users user;
+		try (Session session = factory.openSession()) {
 			transaction = session.beginTransaction();
 			user = (Users) session.createQuery("FROM Users U WHERE U.account = :account")
 					.setParameter("account", account).uniqueResult();
@@ -47,9 +45,6 @@ public class UserDAO extends HibernateDAO<Users> implements GenericDAO<Users> {
 				transaction.rollback();
 			}
 			e.printStackTrace();
-		} finally {
-			if (session != null)
-				session.close();
 		}
 		return false;
 	}

@@ -4,11 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import com.musicweb.model.entity.Users;
 import com.musicweb.util.HibernateUtils;
 
 public class HibernateDAO<E> {
-	protected static SessionFactory factory = null;
+	protected static SessionFactory factory;
 
 	// Chay khi duoc goi tuong tu contructor()
 	static {
@@ -19,10 +18,8 @@ public class HibernateDAO<E> {
 	}
 
 	public E insert(E entity) {
-		Session session = null;
 		Transaction transaction = null;
-		try {
-			session = factory.openSession();
+		try (Session session = factory.openSession()) {
 			transaction = session.beginTransaction();
 
 			session.persist(entity);
@@ -38,21 +35,17 @@ public class HibernateDAO<E> {
 				transaction.rollback();
 			}
 			e.printStackTrace();
-		} finally {
-			session.close();
 		}
 		return entity;
 	}
 	
 	public E update(E entity) {
-		Session session = null;
 		Transaction transaction = null;
-		try {
-			session = factory.openSession();
+		try (Session session = factory.openSession()) {
 			transaction = session.beginTransaction();
 
 			session.saveOrUpdate(entity);
-			
+
 			session.flush();
 			session.refresh(entity);
 			transaction.commit();
@@ -61,21 +54,17 @@ public class HibernateDAO<E> {
 				transaction.rollback();
 			}
 			e.printStackTrace();
-		} finally {
-			session.close();
 		}
 		return entity;
 	}
 	
 	public E delete(E entity) {
-		Session session = null;
 		Transaction transaction = null;
-		try {
-			session = factory.openSession();
+		try (Session session = factory.openSession()) {
 			transaction = session.beginTransaction();
 
 			session.delete(entity);
-			
+
 			session.flush();
 			session.refresh(entity);
 			transaction.commit();
@@ -84,18 +73,14 @@ public class HibernateDAO<E> {
 				transaction.rollback();
 			}
 			e.printStackTrace();
-		} finally {
-			session.close();
 		}
 		return entity;
 	}
 	
 	public E select(Class<E> classE, int id) {
 		E entity = null;
-		Session session = null;
 		Transaction transaction = null;
-		try {
-			session = factory.openSession();
+		try (Session session = factory.openSession()) {
 			transaction = session.beginTransaction();
 
 			entity = session.get(classE, id);
@@ -110,8 +95,6 @@ public class HibernateDAO<E> {
 				transaction.rollback();
 			}
 			e.printStackTrace();
-		} finally {
-			session.close();
 		}
 		return entity;
 	}
