@@ -76,8 +76,6 @@ public class HibernateDAO<E> {
 
 			session.delete(entity);
 			
-			session.flush();
-			session.refresh(entity);
 			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null) {
