@@ -1,7 +1,10 @@
 E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Playlists.java
 E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Albums.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\dao\HibernateDAO.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\controller\LoginUserServlet.java
 E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Songs.java
-E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\dao\UserDAO.java
 E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\util\HibernateUtils.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\dao\UserDAO.java
 E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Users.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\dao\GenericDAO.java
 E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Singers.java
