@@ -12,6 +12,30 @@ public class UserDAO extends HibernateDAO<Users> implements GenericDAO<Users> {
 		return super.insert(user);
 	}
 	
+	@Override
+	public Users update(Users user) {
+		Session session = null;
+		Transaction transaction = null;
+		try {
+			session = factory.openSession();
+			transaction = session.beginTransaction();
+
+			session.saveOrUpdate(user);
+			
+			session.flush();
+			session.refresh(user);
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return user;
+	}
+	
 	public boolean isValidate(String account, String password) {
 		Session session = null;
 		Transaction transaction = null;
@@ -38,7 +62,7 @@ public class UserDAO extends HibernateDAO<Users> implements GenericDAO<Users> {
 		return false;
 	}
 
-
+	
 	
 	
 }

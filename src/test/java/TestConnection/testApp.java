@@ -8,12 +8,14 @@ import org.hibernate.Transaction;
 
 import com.musicweb.model.entity.Users;
 import com.musicweb.util.HibernateUtils;
+import com.musicweb.model.dao.*;
 
 
 public class testApp {
 
 	public static void main(String[] args) {
 		Date date = new Date(2002-12-12);
+		UserDAO dao = new UserDAO();
 		
 		SessionFactory factory = HibernateUtils.getSessionFactory();
 		Session session = factory.openSession();
@@ -21,8 +23,12 @@ public class testApp {
 		
 		Users a = session.load(Users.class, 2);
 		
+		a.setPassword("123456");
+		
 		System.out.println(a.getName());
 		transaction.commit();
+		session.close();
+		dao.update(a);
 		System.out.println("Finally");
 	}
 }
