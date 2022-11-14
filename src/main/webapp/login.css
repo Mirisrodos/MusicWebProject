@@ -47,7 +47,9 @@ body{
 }
 
 .login-body form .username-part,
-.login-body form .password-part{
+.login-body form .password-part,
+.login-body form .name-part,
+.login-body form .re-password-part{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -56,14 +58,18 @@ body{
 }
 
 .login-body form .username-part span,
-.login-body form .password-part span{
+.login-body form .password-part span,
+.login-body form .name-part span,
+.login-body form .re-password-part span{
     font-size: 14px;
     font-weight: bold;
     padding-bottom: 8px;
 }
 
 .login-body form .username-part input,
-.login-body form .password-part input{
+.login-body form .password-part input,
+.login-body form .name-part input,
+.login-body form .re-password-part input{
     padding: 14px;
     width: 100%;
     font-size:14px;

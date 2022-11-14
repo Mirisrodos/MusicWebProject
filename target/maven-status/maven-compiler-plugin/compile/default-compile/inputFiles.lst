@@ -1,5 +1,7 @@
-C:\Users\Triss\OneDrive - hcmute.edu.vn\Desktop\mavenproject1\src\main\java\com\musicweb\model\User.java
-C:\Users\Triss\OneDrive - hcmute.edu.vn\Desktop\mavenproject1\src\main\java\com\musicweb\util\HibernateUtil.java
-C:\Users\Triss\OneDrive - hcmute.edu.vn\Desktop\mavenproject1\src\main\java\com\musicweb\controller\testapp.java
-C:\Users\Triss\OneDrive - hcmute.edu.vn\Desktop\mavenproject1\src\main\java\com\musicweb\controller\test.java
-C:\Users\Triss\OneDrive - hcmute.edu.vn\Desktop\mavenproject1\src\main\java\com\musicweb\dao\UserDAO.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Playlists.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Albums.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Songs.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\dao\UserDAO.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\util\HibernateUtils.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Users.java
+E:\Java-workspace\MusicWebProject\src\main\java\com\musicweb\model\entity\Singers.java
