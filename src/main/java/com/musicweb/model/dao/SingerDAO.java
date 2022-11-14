@@ -3,7 +3,7 @@ package com.musicweb.model.dao;
 import com.musicweb.model.entity.Playlists;
 import com.musicweb.model.entity.Singers;
 
-public class Singer extends HibernateDAO<Singers> implements GenericDAO<Singers> {
+public class SingerDAO extends HibernateDAO<Singers> implements GenericDAO<Singers> {
 
 	@Override
 	public Singers select(int id) {
