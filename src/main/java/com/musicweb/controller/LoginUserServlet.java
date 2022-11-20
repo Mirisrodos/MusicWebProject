@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.musicweb.model.dao.UserDAO;
 
@@ -49,7 +50,11 @@ public class LoginUserServlet extends HttpServlet {
 
         if (loginDAO.isValidate(username, password)) {
 //        	Thêm session và các tính năng Attribute khi đăng nhập thành công
-        	response.sendRedirect("index.html");
+            HttpSession session = request.getSession();
+            session.setAttribute("userid", loginDAO.selectByAccount(username).getUserId());
+            session.setAttribute("username", loginDAO.selectByAccount(username).getName());
+
+            response.sendRedirect("index.html");
         } else {
 //        	Thêm các Attribute khi đăng nhập thất bại để hiện ra thông báo xác nhận là
 //        	tài khoản và mật khẩu

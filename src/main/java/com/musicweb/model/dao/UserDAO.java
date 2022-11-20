@@ -22,6 +22,18 @@ public class UserDAO extends HibernateDAO<Users> implements GenericDAO<Users> {
 		// TODO Auto-generated method stub
 		return super.delete(user);
 	}
+
+	public Users selectByAccount(String account){
+		Users user;
+		try (Session session = factory.openSession()) {
+			user = (Users) session.createQuery("FROM Users U WHERE U.account = :useraccount")
+					.setParameter("useraccount", account).uniqueResult();
+			return user;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
 	@Override
 	public Users select(int id) {
@@ -40,6 +52,24 @@ public class UserDAO extends HibernateDAO<Users> implements GenericDAO<Users> {
 				return true;
 			}
 			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public boolean isExist(String useraccount) {
+		Transaction transaction = null;
+		Users user;
+		try (Session session = factory.openSession()) {
+			user = (Users) session.createQuery("FROM Users U WHERE U.account = :account")
+					.setParameter("account", useraccount).uniqueResult();
+			if (user != null) {
+				return true;
+			}
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
