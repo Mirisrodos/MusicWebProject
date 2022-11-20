@@ -26,7 +26,6 @@ public class RegisterUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            System.out.println("Hello World");
             createAccount(request, response);
         } catch (Exception e) {
             e.printStackTrace();
