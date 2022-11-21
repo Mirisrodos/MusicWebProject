@@ -12,6 +12,13 @@ public class testApp {
         SongDAO songDao = new SongDAO();
 
         List<Songs> songs = songDao.selectBySinger(1);
+    	List<Songs> listsong = songDao.selectAll();
+    	String result = "{";
+    	result.concat("2");
+    	System.out.print(result);
+        listsong.forEach((song) -> {
+        	
+        });
 
         System.out.println(songs.get(1).getName());
     }
