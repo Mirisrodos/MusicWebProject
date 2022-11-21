@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,10 +152,10 @@
           <div class="info">
             <div>
               <i class="bi bi-check-circle-fill"></i>
-              <span>Nghệ sĩ được xác minh</span>
+              <span>Nghá» sÄ© ÄÆ°á»£c xÃ¡c minh</span>
             </div>
-            <h1>Hà Anh Tuấn</h1>
-            <div>256.687 người nghe hằng tháng</div>
+            <h1>HÃ  Anh Tuáº¥n</h1>
+            <div>256.687 ngÆ°á»i nghe háº±ng thÃ¡ng</div>
           </div>
         </div>
 
@@ -166,14 +168,14 @@
             </svg>
           </button>
 
-          <!-- Check theo dõi -->
+          <!-- Check theo dÃµi -->
           <input class="checkfollow--checked" type="checkbox" name="checkfollow" id="checkfollow" hidden>
 
           <label class="follow follow--check" for="checkfollow">
-            <div>Đang theo dõi</div>
+            <div>Äang theo dÃµi</div>
           </label>
           <label class="follow" for="checkfollow">
-            <div>Theo dõi</div>
+            <div>Theo dÃµi</div>
           </label>
 
           <button class="three-btn">
@@ -186,14 +188,14 @@
         </div>
 
         <div class="music-list">
-          <div class="label-list">Phổ biến</div>
+          <div class="label-list">Phá» biáº¿n</div>
           <table>
             <tr>
               <td class="numbers">1</td>
               <td class="headersong">
                 <img src="img/2.jpg" alt="">
                 <div>
-                  <p>Tháng Mấy Em Nhớ Anh?</p>
+                  <p>ThÃ¡ng Máº¥y Em Nhá» Anh?</p>
                 </div>
               </td>
               <td>7.637.690</td>
@@ -207,7 +209,7 @@
               <td class="headersong">
                 <img src="img/2.jpg" alt="">
                 <div>
-                  <p>Tháng Tư Lời Nói Dối Của Em</p>
+                  <p>ThÃ¡ng TÆ° Lá»i NÃ³i Dá»i Cá»§a Em</p>
                 </div>
               </td>
               <td>7.637.690</td>
@@ -221,7 +223,7 @@
               <td class="headersong">
                 <img src="img/2.jpg" alt="">
                 <div>
-                  <p>Người Tình Mùa Đông</p>
+                  <p>NgÆ°á»i TÃ¬nh MÃ¹a ÄÃ´ng</p>
                 </div>
               </td>
               <td>7.637.690</td>
@@ -233,16 +235,16 @@
         </div>
 
         <!-- <div class="music-search">
-          <h1>Hãy tìm nội dung cho danh sách phát của bạn!</h1>
+          <h1>HÃ£y tÃ¬m ná»i dung cho danh sÃ¡ch phÃ¡t cá»§a báº¡n!</h1>
           <div class="search">
             <i class="bi bi-search"></i>
-            <input type="text" placeholder="Tìm bài hát hoặc ALBUM" />
+            <input type="text" placeholder="TÃ¬m bÃ i hÃ¡t hoáº·c ALBUM" />
           </div>
         </div> -->
 
         <!-- <div class="rec-pl">
-          <h1>ĐỀ XUẤT</h1>
-          <P>Dựa trên nội dung có trong danh sách phát này</P>
+          <h1>Äá» XUáº¤T</h1>
+          <P>Dá»±a trÃªn ná»i dung cÃ³ trong danh sÃ¡ch phÃ¡t nÃ y</P>
           <table>
             <tr>
               <td class="headersong">
@@ -254,7 +256,7 @@
               </td>
               <td>Animu</td>
               <td>
-                <input type="button" value="Thêm">
+                <input type="button" value="ThÃªm">
               </td>
             </tr>
             <tr>
@@ -267,7 +269,7 @@
               </td>
               <td>Darkness</td>
               <td>
-                <input type="button" value="Thêm">
+                <input type="button" value="ThÃªm">
               </td>
             </tr>
 
@@ -281,13 +283,13 @@
               </td>
               <td>Atomic</td>
               <td>
-                <input type="button" value="Thêm">
+                <input type="button" value="ThÃªm">
               </td>
             </tr>
           </table>
         </div> -->
 
-        <!-- Sử lại từ popular song -->
+        <!-- Sá»­ láº¡i tá»« popular song -->
         <div class="album_singer singerpage--album">
           <div class="h4">
             <h4 class="label-list label-album">Album</h4>
@@ -429,7 +431,7 @@
           <div class="wave1"></div>
           <div class="wave1"></div>
         </div>
-        <!-- Icon kế bên wave nhưng không có ảnh được thay bằng border trắng -->
+        <!-- Icon káº¿ bÃªn wave nhÆ°ng khÃ´ng cÃ³ áº£nh ÄÆ°á»£c thay báº±ng border tráº¯ng -->
         <img src="#" alt="" id="poster_master_play" />
         <h5 id="title">
           Vande mataram

@@ -29,7 +29,7 @@ public class LoginUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        response.sendRedirect("login.html");
+        response.sendRedirect("login.jsp");
         
     }
 
@@ -54,11 +54,11 @@ public class LoginUserServlet extends HttpServlet {
             session.setAttribute("userid", loginDAO.selectByAccount(username).getUserId());
             session.setAttribute("username", loginDAO.selectByAccount(username).getName());
 
-            response.sendRedirect("index.html");
+            response.sendRedirect("index.jsp");
         } else {
 //        	Thêm các Attribute khi đăng nhập thất bại để hiện ra thông báo xác nhận là
 //        	tài khoản và mật khẩu
-            response.sendRedirect("login.html");
+            response.sendRedirect("login.jsp");
         }
     }
     

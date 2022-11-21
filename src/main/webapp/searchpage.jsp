@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,14 +152,14 @@
         <div class="search-result">
 
           <div class="no1search">
-            <h2>Kết quả hàng đầu</h2>
+            <h2>KÃªÌt quaÌ haÌng ÄÃ¢Ìu</h2>
             <div class="song-image">
               <img src="./img/karik-image.jfif">
             </div>
-            <h1>Có Chơi Có Chịu</h1>
+            <h1>CoÌ ChÆ¡i CoÌ ChiÌ£u</h1>
             <div class="song-info">
               <span class="singer-name">Karik, Only C</span>
-              <span class="type">Bài Hát</span>
+              <span class="type">BaÌi HaÌt</span>
             </div>
             <button class="play-btn">
               <svg role="img" height="28" width="28" viewBox="0 0 24 24" class="Svg-ytk21e-0 jAKAlG">
@@ -168,13 +170,13 @@
             </button>
           </div>
           <div class="searched-list">
-            <h2>Bài Hát</h2>
+            <h2>BaÌi HaÌt</h2>
             <ul>
               <li>
                 <div class="song-info">
                   <img src="./img/karik-image.jfif">
                   <div class="detail">
-                    <span>Có Chơi Có Chịu</span>
+                    <span>CoÌ ChÆ¡i CoÌ ChiÌ£u</span>
                     <p>Karik, Only C</p>
                   </div>
                   <div class="play-btn"><i class="bi bi-play-fill"></i></div>
@@ -201,7 +203,7 @@
                 <div class="song-info">
                   <img src="./img/karik-image.jfif">
                   <div class="detail">
-                    <span>Có Chơi Có Chịu</span>
+                    <span>CoÌ ChÆ¡i CoÌ ChiÌ£u</span>
                     <p>Karik, Only C</p>
                   </div>
                   <div class="play-btn"><i class="bi bi-play-fill"></i></div>
@@ -228,7 +230,7 @@
                 <div class="song-info">
                   <img src="./img/karik-image.jfif">
                   <div class="detail">
-                    <span>Có Chơi Có Chịu</span>
+                    <span>CoÌ ChÆ¡i CoÌ ChiÌ£u</span>
                     <p>Karik, Only C</p>
                   </div>
                   <div class="play-btn"><i class="bi bi-play-fill"></i></div>
@@ -255,7 +257,7 @@
                 <div class="song-info">
                   <img src="./img/karik-image.jfif">
                   <div class="detail">
-                    <span>Có Chơi Có Chịu</span>
+                    <span>CoÌ ChÆ¡i CoÌ ChiÌ£u</span>
                     <p>Karik, Only C</p>
                   </div>
                   <div class="play-btn"><i class="bi bi-play-fill"></i></div>
@@ -290,7 +292,7 @@
             <div class="col">
               <img src="./img/min.jfif">
               <div class="album-info">
-                <h2>Có Em Chờ</h2>
+                <h2>CoÌ Em ChÆ¡Ì</h2>
                 <p>2017 - Min</p>
               </div>
               <button class="play-btn">
@@ -304,7 +306,7 @@
             <div class="col">
               <img src="./img/min.jfif">
               <div class="album-info">
-                <h2>Có Em Chờ</h2>
+                <h2>CoÌ Em ChÆ¡Ì</h2>
                 <p>2017 - Min</p>
               </div>
               <button class="play-btn">
@@ -318,7 +320,7 @@
             <div class="col">
               <img src="./img/min.jfif">
               <div class="album-info">
-                <h2>Có Em Chờ</h2>
+                <h2>CoÌ Em ChÆ¡Ì</h2>
                 <p>2017 - Min</p>
               </div>
               <button class="play-btn">
@@ -332,7 +334,7 @@
             <div class="col">
               <img src="./img/min.jfif">
               <div class="album-info">
-                <h2>Có Em Chờ</h2>
+                <h2>CoÌ Em ChÆ¡Ì</h2>
                 <p>2017 - Min</p>
               </div>
               <button class="play-btn">
@@ -346,7 +348,7 @@
             <div class="col">
               <img src="./img/min.jfif">
               <div class="album-info">
-                <h2>Có Em Chờ</h2>
+                <h2>CoÌ Em ChÆ¡Ì</h2>
                 <p>2017 - Min</p>
               </div>
               <button class="play-btn">
@@ -370,7 +372,7 @@
           <div class="wave1"></div>
           <div class="wave1"></div>
         </div>
-        <!-- Icon kế bên wave nhưng không có ảnh được thay bằng border trắng -->
+        <!-- Icon káº¿ bÃªn wave nhÆ°ng khÃ´ng cÃ³ áº£nh ÄÆ°á»£c thay báº±ng border tráº¯ng -->
         <img src="#" alt="" id="poster_master_play" />
         <h5 id="title">
           Vande mataram

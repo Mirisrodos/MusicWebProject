@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,25 +19,25 @@
         <form action="registered" method="post">
             <div class="username-part">
                 <span>Name</span>
-                <input type="text" placeholder="Nhập tên tài khoản của bạn" name="username"/>
+                <input type="text" placeholder="NhÃ¢Ì£p tÃªn taÌi khoaÌn cuÌa baÌ£n" name="username"/>
             </div>
             <div class="name-part">
                 <span>Account</span>
-                <input type="text" placeholder="Tên của bạn là gì" name="useraccount"/>
+                <input type="text" placeholder="TÃªn cuÌa baÌ£n laÌ giÌ" name="useraccount"/>
             </div>
             <div class="password-part">
-                <span>Mật khẩu</span>
-                <input type="password" placeholder="Mật khẩu" name="userpassword"/>
+                <span>MÃ¢Ì£t khÃ¢Ìu</span>
+                <input type="password" placeholder="MÃ¢Ì£t khÃ¢Ìu" name="userpassword"/>
             </div>
             <div class="re-password-part">
-                <span>Nhập Lại Mật khẩu</span>
-                <input type="password" placeholder="Mật khẩu" name="passwordconfirm"/>
+                <span>NhÃ¢Ì£p LaÌ£i MÃ¢Ì£t khÃ¢Ìu</span>
+                <input type="password" placeholder="MÃ¢Ì£t khÃ¢Ìu" name="passwordconfirm"/>
             </div>
             <div class="bottom-part">
 
                 <div class="function-bottom">
                     <span></span>
-                    <button type="submit" value="submit">ĐĂNG KÝ</button>
+                    <button type="submit" value="submit">ÄÄNG KYÌ</button>
                 </div>
             </div>
         </form>
