@@ -3,11 +3,10 @@ package com.musicweb.model.dao;
 import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 import com.musicweb.model.entity.Songs;
 
-public class SongDao extends HibernateDAO<Songs> implements GenericDAO<Songs> {
+public class SongDAO extends HibernateDAO<Songs> implements GenericDAO<Songs> {
 
 	@Override
 	public Songs select(int id) {
