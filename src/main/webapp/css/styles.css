@@ -588,6 +588,7 @@ header .song_side nav .user {
 }
 
 header .song_side nav .user span{
+    padding-top: 5px;
     display: flex;
     font-size: 18px;
 }
@@ -602,14 +603,36 @@ header .song_side nav .user span a {
 
 header .song_side nav .user span .login{
     color: #36e2ec;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    transition: all 0.7s;
 }
 
 header .song_side nav .user span .login:hover{
-    color: white;
+    color: black;
+    background-color: #36e2ec;
 }
 
+header .song_side nav .user span .register {
+    opacity: 0.8;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    transition: all 0.7s;
+}
 header .song_side nav .user span .register:hover{
     opacity: 0.8;
+    color: black;
+    background-color: #36e2ec;
+}
+header .song_side nav .user span .logged {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 header .song_side nav .user img {
