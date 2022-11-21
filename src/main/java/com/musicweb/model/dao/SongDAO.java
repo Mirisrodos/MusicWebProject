@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Session;
 
 import com.musicweb.model.entity.Songs;
+import com.musicweb.model.entity.Users;
 
 public class SongDAO extends HibernateDAO<Songs> implements GenericDAO<Songs> {
 
@@ -43,5 +44,28 @@ public class SongDAO extends HibernateDAO<Songs> implements GenericDAO<Songs> {
 			e.printStackTrace();
 		}
 		return entity;
+	}
+
+	public List<Songs> selectByUser(Integer id){
+		List<Songs> songs = null;
+		String HQL = "select u from Users u " +
+				"";
+		try (Session session = factory.openSession()) {
+			songs = session.createQuery(HQL).setParameter("id", id).list();
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+		return songs;
+	}
+
+	public List<Songs> selectBySinger(Integer id){
+		List<Songs> songs = null;
+		String HQL = "select s from Songs s inner join s.singers si where si.singerId = :id";
+		try (Session session = factory.openSession()){
+			songs = session.createQuery(HQL).setParameter("id", id).list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return songs;
 	}
 }

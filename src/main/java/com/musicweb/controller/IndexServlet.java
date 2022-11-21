@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import com.musicweb.model.dao.SongDAO;
 import com.musicweb.model.entity.Songs;
 
-@WebServlet("/")
+@WebServlet("/12312")
 public class IndexServlet extends HttpServlet{
     private static final long serialVersionUID = 1L;
     private SongDAO songDAO = null;
@@ -39,8 +39,7 @@ public class IndexServlet extends HttpServlet{
         listSongResult += "]";
         
         request.setAttribute("listSongResult",listSongResult);
-        RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-        rd.forward(request, response);
+        response.sendRedirect("login.jsp");
         System.out.print("123");
     }
 }
