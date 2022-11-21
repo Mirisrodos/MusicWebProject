@@ -134,7 +134,7 @@
                     <c:if test="${!empty sessionScope.userid }">
                         <div class="user">
                             <span>
-                                <a class="register logged" href="#">${sessionScope.username}</a> |
+                                <a class="register logged" href="#">${sessionScope.username}</a> 
                                 <a class="login" href="logout">Logout</a>
                             </span>
                         </div>
@@ -143,7 +143,7 @@
                     <c:if test="${empty sessionScope.userid }">
                         <div class="user">
                             <span>
-                                <a class="login" href="login">Login</a> |
+                                <a class="login" href="login">Login</a> 
                                 <a class="register" href="registered">Register</a>
                             </span>
                         </div>

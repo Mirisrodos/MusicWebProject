@@ -595,18 +595,16 @@ header .song_side nav .user span{
 
 header .song_side nav .user span a {
     font-size: inherit;
-    color:white;
+    color: #36e2ec;
     margin-inline: 10px;
     text-decoration: none;
-    transition: all 0.2s ease;
+    border-radius: 10px;
 }
 
 header .song_side nav .user span .login{
-    color: #36e2ec;
     box-sizing: border-box;
     padding: 5px 10px;
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
+    border: 2px solid #36e2ec;
     transition: all 0.7s;
 }
 
@@ -619,8 +617,7 @@ header .song_side nav .user span .register {
     opacity: 0.8;
     box-sizing: border-box;
     padding: 5px 10px;
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
+    border: 1px solid #36e2ec;
     transition: all 0.7s;
 }
 header .song_side nav .user span .register:hover{
@@ -630,9 +627,8 @@ header .song_side nav .user span .register:hover{
 }
 header .song_side nav .user span .logged {
     box-sizing: border-box;
-    padding: 5px 10px;
-    border: 1px solid white;
-    border-radius: 5px;
+    color: white;
+    background-color: #36e2ec;
 }
 
 header .song_side nav .user img {
