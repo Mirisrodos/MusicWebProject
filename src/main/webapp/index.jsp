@@ -290,7 +290,7 @@
         </div>
         <div class="popular_artists">
           <div class="h4">
-            <h4>Ca siÌ</h4>
+            <h4>Singer</h4>
             <div class="btn_s">
               <i class="bi bi-arrow-left-short" id="pop_art_left"></i>
               <i class="bi bi-arrow-right-short" id="pop_art_right"></i>

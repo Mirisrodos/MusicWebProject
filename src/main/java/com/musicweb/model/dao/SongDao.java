@@ -1,5 +1,10 @@
 package com.musicweb.model.dao;
 
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import com.musicweb.model.entity.Songs;
 
 public class SongDao extends HibernateDAO<Songs> implements GenericDAO<Songs> {
@@ -26,6 +31,18 @@ public class SongDao extends HibernateDAO<Songs> implements GenericDAO<Songs> {
 	public Songs delete(Songs entity) {
 		// TODO Auto-generated method stub
 		return super.delete(entity);
-	}
+	}	
+	
+	public List<Songs> selectAll() {
+		List<Songs> entity = null;
+		try (Session session = factory.openSession()) {
 
+			String query = "select s from Songs s";
+			entity = session.createQuery(query).list();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return entity;
+	}
 }
