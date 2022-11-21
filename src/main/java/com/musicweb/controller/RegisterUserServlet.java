@@ -20,7 +20,7 @@ public class RegisterUserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("register.html");
+        response.sendRedirect("register.jsp");
     }
 
     @Override
@@ -41,12 +41,12 @@ public class RegisterUserServlet extends HttpServlet {
 
         if (!registeredDAO.isExist(user.getAccount())) {
             registeredDAO.insert(user);
-            response.sendRedirect("login.html");
-//            response.sendRedirect("register.html");
+            response.sendRedirect("login.jsp");
+//            response.sendRedirect("register.jsp");
         }
         else
         {
-            response.sendRedirect("register.html");
+            response.sendRedirect("register.jsp");
         }
     }
 
