@@ -1,3 +1,5 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -419,6 +421,10 @@
   </header>
 
   <script src="app.js"></script>
+   <script type="text/javascript">
+            const a = `${listSongResult}`;
+            console.log(a)
+   </script>
 </body>
 
 </html>
