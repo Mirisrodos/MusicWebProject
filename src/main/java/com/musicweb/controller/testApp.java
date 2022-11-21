@@ -1,14 +1,18 @@
 package com.musicweb.controller;
 
-import com.musicweb.model.dao.UserDAO;
-import com.musicweb.model.entity.Users;
+import com.musicweb.model.entity.Songs;
+
+import java.util.List;
+
+import com.musicweb.model.dao.SongDAO;
+
 
 public class testApp {
     public static void main(String[] args) {
-        UserDAO udao = new UserDAO();
+        SongDAO songDao = new SongDAO();
 
-        Users user = udao.selectByAccount("hoa");
+        List<Songs> listsong = songDao.selectAll();
 
-        System.out.println(user.getName());
+    
     }
 }

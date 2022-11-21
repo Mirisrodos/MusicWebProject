@@ -19,19 +19,19 @@
         <form action="registered" method="post">
             <div class="username-part">
                 <span>Name</span>
-                <input type="text" placeholder="NhÃ¢Ì£p tÃªn taÌi khoaÌn cuÌa baÌ£n" name="username"/>
+                <input type="text" placeholder="Nhập tên của bạn" name="username"/>
             </div>
             <div class="name-part">
                 <span>Account</span>
-                <input type="text" placeholder="TÃªn cuÌa baÌ£n laÌ giÌ" name="useraccount"/>
+                <input type="text" placeholder="Nhập tên tài khoản của bạn" name="useraccount"/>
             </div>
             <div class="password-part">
-                <span>MÃ¢Ì£t khÃ¢Ìu</span>
-                <input type="password" placeholder="MÃ¢Ì£t khÃ¢Ìu" name="userpassword"/>
+                <span>Password</span>
+                <input type="password" placeholder="Mật khẩu" name="userpassword"/>
             </div>
             <div class="re-password-part">
-                <span>NhÃ¢Ì£p LaÌ£i MÃ¢Ì£t khÃ¢Ìu</span>
-                <input type="password" placeholder="MÃ¢Ì£t khÃ¢Ìu" name="passwordconfirm"/>
+                <span>Retype Password</span>
+                <input type="password" placeholder="Nhập lại mật khẩu" name="passwordconfirm"/>
             </div>
             <div class="bottom-part">
 
