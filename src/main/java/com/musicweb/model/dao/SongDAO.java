@@ -48,8 +48,8 @@ public class SongDAO extends HibernateDAO<Songs> implements GenericDAO<Songs> {
 
 	public List<Songs> selectByUser(Integer id){
 		List<Songs> songs = null;
-		String HQL = "select u from Users u " +
-				"";
+		String HQL = "select s from Playlists p inner join p.users u inner join p.songses s where u.id = :id and p.id = :id";
+
 		try (Session session = factory.openSession()) {
 			songs = session.createQuery(HQL).setParameter("id", id).list();
 		} catch(Exception e){
