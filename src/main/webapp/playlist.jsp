@@ -32,96 +32,108 @@
                         <span></span><i class="bi bi-music-note-beamed"></i><a href="">Library</a>
                     </h4>
                 </div>
-                <div class="menu_song">
-                    <li class="songItem">
-                        <a href="songdetail">
-                            <span>01</span>
-                            <img src="img/1.jpg" alt="" />
-                            <h5>
-                                On My Way <br />
-                                <div class="subtitle">Alen Walker</div>
-                            </h5>
-                        </a>
-                        <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
-                    </li>
-                    <li class="songItem">
-                        <a href="songdetail">
-                            <span>02</span>
-                            <img src="img/2.jpg" alt="" />
-                            <h5>
-                                On My Way <br />
-                                <div class="subtitle">Alen Walker</div>
-                            </h5>
-                        </a>
-                        <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
-                    </li>
-                    <li class="songItem">
-                        <a href="songdetail">
-                            <span>03</span>
-                            <img src="img/2.jpg" alt="" />
-                            <h5>
-                                On My Way <br />
-                                <div class="subtitle">Alen Walker</div>
-                            </h5>
-                        </a>
-                        <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
-                    </li>
-                    <li class="songItem">
-                        <a href="songdetail">
-                            <span>04</span>
-                            <img src="img/2.jpg" alt="" />
-                            <h5>
-                                On My Way <br />
-                                <div class="subtitle">Alen Walker</div>
-                            </h5>
-                        </a>
-                        <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
-                    </li>
-                    <li class="songItem">
-                        <a href="songdetail">
-                            <span>05</span>
-                            <img src="img/2.jpg" alt="" />
-                            <h5>
-                                On My Way <br />
-                                <div class="subtitle">Alen Walker</div>
-                            </h5>
-                        </a>
-                        <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
-                    </li>
-                    <li class="songItem">
-                        <a href="songdetail">
-                            <span>06</span>
-                            <img src="img/2.jpg" alt="" />
-                            <h5>
-                                On My Way <br />
-                                <div class="subtitle">Alen Walker</div>
-                            </h5>
-                        </a>
-                        <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
-                    </li>
-                    <li class="songItem">
-                        <a href="songdetail">
-                            <span>07</span>
-                            <img src="img/2.jpg" alt="" />
-                            <h5>
-                                On My Way <br />
-                                <div class="subtitle">Alen Walker</div>
-                            </h5>
-                        </a>
-                        <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-                    </li>
-                    <li class="songItem">
-                        <a href="songdetail">
-                            <span>08</span>
-                            <img src="img/2.jpg" alt="" />
-                            <h5>
-                                On My Way <br />
-                                <div class="subtitle">Alen Walker</div>
-                            </h5>
-                        </a>
-                        <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-                    </li>
-                </div>
+                <c:if test="${!empty sessionScope.userid }">
+                     <ul class="menu_song">
+            <li class="songItem">
+              <a href="songdetail">
+                <span>01</span>
+                <img src="img/1.jpg" alt="" />
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alen Walker</div>
+                </h5>
+              </a>
+              <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+            </li>
+            <li class="songItem">
+              <a href="songdetail">
+                <span>02</span>
+                <img src="img/2.jpg" alt="" />
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alen Walker</div>
+                </h5>
+              </a>
+              <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+            </li>
+            <li class="songItem">
+              <a href="songdetail">
+                <span>03</span>
+                <img src="img/2.jpg" alt="" />
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alen Walker</div>
+                </h5>
+              </a>
+              <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+            </li>
+            <li class="songItem">
+              <a href="songdetail">
+                <span>04</span>
+                <img src="img/2.jpg" alt="" />
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alen Walker</div>
+                </h5>
+              </a>
+              <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+            </li>
+            <li class="songItem">
+              <a href="songdetail">
+                <span>05</span>
+                <img src="img/2.jpg" alt="" />
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alen Walker</div>
+                </h5>
+              </a>
+              <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+            </li>
+            <li class="songItem">
+              <a href="songdetail">
+                <span>06</span>
+                <img src="img/2.jpg" alt="" />
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alen Walker</div>
+                </h5>
+              </a>
+              <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+            </li>
+            <li class="songItem">
+              <a href="songdetail">
+                <span>07</span>
+                <img src="img/2.jpg" alt="" />
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alen Walker</div>
+                </h5>
+              </a>
+              <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+            </li>
+            <li class="songItem">
+              <a href="songdetail">
+                <span>08</span>
+                <img src="img/2.jpg" alt="" />
+                <h5>
+                  On My Way <br />
+                  <div class="subtitle">Alen Walker</div>
+                </h5>
+              </a>
+              <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+            </li>
+          </ul>
+            </c:if>
+
+            <c:if test="${empty sessionScope.userid }">
+              <div style="margin-top: 100px; margin-left: 20px; color:#4c5262;" class="need-to-login">
+              You need to 
+              <a style="color: #36e2ec ; text-decoration: none;" href="login">Login</a> 
+              or 
+              <a style="color: #36e2ec ; text-decoration: none; opacity: 0.7" href="registered">Register</a> 
+              first
+              </div>
+            </c:if>
             </div>
             <div class="song_side">
                 <nav>
