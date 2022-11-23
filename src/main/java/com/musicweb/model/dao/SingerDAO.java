@@ -47,4 +47,16 @@ public class SingerDAO extends HibernateDAO<Singers> implements GenericDAO<Singe
 		return entity;
 	}
 
+	public List<Singers> searchSinger(String string){
+		List<Singers> singers = null;
+		String HQL = "select s from Singers s where s.name like :name";
+		String name = "%" + string + "%";
+		try (Session session = factory.openSession()) {
+			singers = session.createQuery(HQL).setParameter("name", name).list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return singers;
+	}
+
 }

@@ -6,6 +6,7 @@ import org.hibernate.Session;
 
 import com.musicweb.model.entity.Songs;
 import com.musicweb.model.entity.Users;
+import org.hibernate.SessionFactory;
 
 public class SongDAO extends HibernateDAO<Songs> implements GenericDAO<Songs> {
 
@@ -66,6 +67,19 @@ public class SongDAO extends HibernateDAO<Songs> implements GenericDAO<Songs> {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return songs;
+	}
+
+	public List<Songs> searchSong(String string){
+		List<Songs> songs = null;
+		String HQL = "select s from Songs s where s.name like :name";
+		String name = "%" + string + "%";
+		try (Session session = factory.openSession()) {
+			songs = session.createQuery(HQL).setParameter("name", name).list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		return songs;
 	}
 }
