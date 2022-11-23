@@ -1,3 +1,4 @@
 /target/*
 /.idea/*
 **/controller/testController.java
+/target/
