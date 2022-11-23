@@ -192,14 +192,17 @@
               <div class="pop_song">
               	<c:forEach items="${listSong}" var="song"> 
 				 <li class="songItem">
+			
                   <div class="img_play">
                     <img src="img/2.jpg" alt="" />
                     <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
                   </div>
-                  <h5>
+                  <a style="text-decoration:none; color:white" href="songdetail?songid=${song.getSongId()}">
+                  <h5 style="overflow:unset">
                     On My Way<br />
                     <div class="subtitle">Alen Walker</div>
                   </h5>
+                  </a>
                 </li>
 				</c:forEach>
                </div>
@@ -217,7 +220,7 @@
 					 <li>
 	                  <a style="text-decoration:none" href="singerpage">
 	                    <img src="img/singerImg/${singer.getSingerId()}.jpg" alt="" />
-	                    <h5 style="padding: 5px 0px 0px 5px;line-height: 15px;font-size: 14px;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;margin-top: 8px; color: white">${singer.getName()}</h5>
+	                    <h5 style="padding: 5px 0px 0px 5px;line-height: 15px;font-size: 14px;width: 100px;margin-top: 8px; color: white">${singer.getName()}</h5>
 	                  </a>
                 	</li>
 				  </c:forEach>

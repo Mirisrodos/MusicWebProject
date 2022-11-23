@@ -168,21 +168,14 @@
           <div class="music_info">
             <img src="./img/karik-image.jfif" />
             <div class="info">
-              <p>ÄiÌa ÄÆ¡n</p>
-              <h1>CÃ³ ChÆ¡i CÃ³ Chá»u</h1>
+              <h1 style="font-size: 100px">${songDetail.getName()}</h1>
               <div class="Fb61sprjhh75aOITDnsJ">
                 <span class="Type__TypeElement-goli3j-0 hWmToD">
-                  <a draggable="false" data-testid="creator-link" href="/artist/2Bwp23pD4UVsSkchHDZw4F">Karik,</a>
+                  <a draggable="false" data-testid="creator-link" href="/artist/2Bwp23pD4UVsSkchHDZw4F">,</a>
                 </span>
-                <span class="n4hTP7ZeAOT_UQEkRUR7"> </span>
-                <span class="Type__TypeElement-goli3j-0 hWmToD">
-                  <a draggable="false" data-testid="creator-link" href="/artist/5GBXwBVQufRCmwI1bNRIUo">Only C,</a>
-                </span>
+                
                 <span class="Type__TypeElement-goli3j-0 cPwEdQ RANLXG3qKB61Bh33I0r2"
-                  aria-expanded="false">2022,</span><span
-                  class="Type__TypeElement-goli3j-0 cPwEdQ RANLXG3qKB61Bh33I0r2">
-                  1 bÃ i hÃ¡t,
-                  <span class="UyzJidwrGk3awngSGIwv">3 phÃºt 43 giÃ¢y</span></span>
+                  aria-expanded="false">2022</span>
               </div>
             </div>
           </div>
