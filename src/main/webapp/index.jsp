@@ -141,9 +141,9 @@
         <div class="song_side">
           <!--  -->
           <nav>
-            <form method="get" class="search" action="searchpage">
+            <form method="get" class="search" action="search">
               <i class="bi bi-search"></i>
-              <input name="input" type="text" placeholder="Search Music..." />
+              <input type="text" placeholder="Search Music..." name = "searchValue" />
               <button style="display:none" type="submit">Search</button>
             </form>
 
