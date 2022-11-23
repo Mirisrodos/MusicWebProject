@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
-  const music = new Audio("audio/1.mp3");
-  //music.play();
 
+
+  const music = new Audio("audio/1.mp3");
+ 
   const songs = [
     {
       id: 1,
@@ -187,7 +188,6 @@ $(document).ready(function () {
     Array.from(document.getElementsByClassName("playListPlay")).forEach((e) => {
       e.addEventListener("click", (el) => {
         index = el.target.id;
-        // console.log(index);
         music.src = `audio/${index}.mp3`;
         music.play();
         masterPlay.classList.remove("bi-play-fill");
@@ -376,6 +376,7 @@ $(document).ready(function () {
   //-----------------------------------------------------------
 
   const main = () => {
+
     renderSongInfo();
     masterPlayEvent();
     songPlayButtonChange();
@@ -385,7 +386,7 @@ $(document).ready(function () {
     menuLinkListEvent();
     songCarouselEvent();
     artCarouselEvent();
-   
+   	
   };
 
   main();

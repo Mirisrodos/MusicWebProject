@@ -11,35 +11,47 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.musicweb.model.dao.SingerDAO;
 import com.musicweb.model.dao.SongDAO;
+import com.musicweb.model.entity.Singers;
 import com.musicweb.model.entity.Songs;
 
-@WebServlet("/12312")
+@WebServlet(urlPatterns = {"","/index"})
 public class IndexServlet extends HttpServlet{
     private static final long serialVersionUID = 1L;
     private SongDAO songDAO = null;
+    private SingerDAO singerDAO = null;
     
     public void init() {
         songDAO = new SongDAO();
+        singerDAO = new SingerDAO();
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+    	
     	List<Songs> listsong = songDAO.selectAll();
-        String listSongResult = "[";
+    	List<Singers> listsinger = singerDAO.selectAll();
+    	
+        String listSongResultJSON = "[";
        
         for(Songs song:listsong){
+        	if(song.getSongId() > 1) listSongResultJSON += ",";
+        		
+        	
         	String data =( 
         			"{"+"\"" + "name" + "\"" + ":" + "\"" + song.getName() + "\"" + "," +
         			"\"" + "song_id" + "\"" + ":" + "\"" + String.valueOf(song.getSongId()) + "\"" + "}"
         	);
-        	listSongResult += data;
-        	listSongResult += ",";
+        	listSongResultJSON += data;
         } 
-        listSongResult += "]";
+        listSongResultJSON += "]";
         
-        request.setAttribute("listSongResult",listSongResult);
-        response.sendRedirect("login.jsp");
-        System.out.print("123");
+        request.setAttribute("listSongResultJSON",listSongResultJSON);
+        request.setAttribute("listSong", listsong);
+        request.setAttribute("listSinger", listsinger);
+        
+        RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+        rd.forward(request, response);
     }
 }
