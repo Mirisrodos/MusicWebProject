@@ -30,8 +30,8 @@ public class SongDetailServlet extends HttpServlet{
 		int songId = Integer.parseInt( request.getParameter("songid"));
 		
 		Songs songDetail = songDAO.select(songId);
-		System.out.print(songDetail.getSingers().getName());
 		request.setAttribute("songDetail", songDetail);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("songdetail.jsp");
         rd.forward(request, response);
 	}

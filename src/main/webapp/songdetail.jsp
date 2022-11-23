@@ -171,11 +171,11 @@
               <h1 style="font-size: 100px">${songDetail.getName()}</h1>
               <div class="Fb61sprjhh75aOITDnsJ">
                 <span class="Type__TypeElement-goli3j-0 hWmToD">
-                  <a draggable="false" data-testid="creator-link" href="/artist/2Bwp23pD4UVsSkchHDZw4F">,</a>
+                  <a draggable="false" data-testid="creator-link" href="/artist/2Bwp23pD4UVsSkchHDZw4F">${songDetail.getSingers().getName()},</a>
                 </span>
                 
                 <span class="Type__TypeElement-goli3j-0 cPwEdQ RANLXG3qKB61Bh33I0r2"
-                  aria-expanded="false">2022</span>
+                  aria-expanded="false">${songDetail.getReleaseDate().toString() }</span>
               </div>
             </div>
           </div>
