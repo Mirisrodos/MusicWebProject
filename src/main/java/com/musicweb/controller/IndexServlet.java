@@ -30,8 +30,16 @@ public class IndexServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
     	
+    	HttpSession session = request.getSession();
     	List<Songs> listsong = songDAO.selectAll();
     	List<Singers> listsinger = singerDAO.selectAll();
+    	
+    	if(session.getAttribute("userid") != null) {
+    		String userId=(String)session.getAttribute("userid").toString();  
+    		List<Songs> userListSong = songDAO.selectByUser(Integer.parseInt(userId));
+    		session.setAttribute("userListSong",userListSong);
+    	}
+    	
     	
         String listSongResultJSON = "[";
        
@@ -47,8 +55,8 @@ public class IndexServlet extends HttpServlet{
         } 
         listSongResultJSON += "]";
         
-        request.setAttribute("listSongResultJSON",listSongResultJSON);
-        request.setAttribute("listSong", listsong);
+        session.setAttribute("listSongResultJSON",listSongResultJSON);
+        session.setAttribute("listSong", listsong);
         request.setAttribute("listSinger", listsinger);
         
         RequestDispatcher rd = request.getRequestDispatcher("index.jsp");

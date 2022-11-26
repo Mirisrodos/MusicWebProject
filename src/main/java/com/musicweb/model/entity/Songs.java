@@ -107,7 +107,7 @@ public class Songs implements java.io.Serializable {
 		this.releaseDate = releaseDate;
 	}
 
-	@ManyToMany(fetch = FetchType.LAZY)
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "playlists_songs", catalog = "musicwebdb", joinColumns = {
 			@JoinColumn(name = "song_id", nullable = false, updatable = false) }, inverseJoinColumns = {
 					@JoinColumn(name = "playlist_id", nullable = false, updatable = false) })

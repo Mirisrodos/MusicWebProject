@@ -16,24 +16,31 @@ import com.musicweb.model.dao.SongDAO;
 import com.musicweb.model.entity.Singers;
 import com.musicweb.model.entity.Songs;
 
-@WebServlet(urlPatterns = {"/songdetail"})
-public class SongDetailServlet extends HttpServlet{
+
+@WebServlet(urlPatterns = {"/singerdetail"})
+public class SingerDetailServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-    private SongDAO songDAO = null;
-    
-    public void init() {
-        songDAO = new SongDAO();
-    }
+	private SingerDAO singerDAO = null;
+	private SongDAO songDAO = null;
+	
+	 public void init() {
+	    singerDAO = new SingerDAO();
+	    songDAO = new SongDAO();
+	 }
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 		    throws ServletException, IOException {
 		
-		int songId = Integer.parseInt( request.getParameter("songid"));
-    	
-		Songs songDetail = songDAO.select(songId);
-		request.setAttribute("songDetail", songDetail);
+		int singerId = Integer.parseInt( request.getParameter("singerid"));
+		List<Songs> listSong = songDAO.selectBySinger(singerId);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("songdetail.jsp");
+		Singers singerDetail = singerDAO.select(singerId);
+		
+		request.setAttribute("singerDetail", singerDetail);
+		request.setAttribute("listSong", listSong);
+
+	
+		RequestDispatcher rd = request.getRequestDispatcher("singerpage.jsp");
         rd.forward(request, response);
 	}
 }

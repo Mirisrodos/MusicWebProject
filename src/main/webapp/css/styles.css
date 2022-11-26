@@ -477,7 +477,7 @@ header .song_side {
 
 header .song_side .main-scroll{
     margin-top: 50px;
-    overflow: auto;
+    overflow:auto;
     height: 590px;
 }
 
