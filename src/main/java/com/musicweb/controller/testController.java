@@ -16,7 +16,7 @@ import java.util.Set;
 public class testController {
     public static void main(String[] args) {
         SongDAO songDao = new SongDAO();
-<<<<<<< HEAD
+
 
         List<Songs> songs = songDao.searchSong("a");
 
@@ -26,7 +26,7 @@ public class testController {
 //
 //        List<Singers> singers = singerDAO.searchSinger("A");
 //        System.out.println(singers.get(0).getName());
-=======
+
         PlaylistDAO playlistDAO = new PlaylistDAO();
         UserDAO userDAO = new UserDAO();
 
@@ -34,11 +34,9 @@ public class testController {
         Users user = userDAO.select(1);
         Playlists playlist = playlistDAO.select(1);
 
-        Set<Songs> songs = playlist.getSongses();
 
         songs.add(song);
 
-        playlist.setSongses(songs);
 
         Set<Playlists> playlists = song.getPlaylistses();
 
@@ -49,6 +47,6 @@ public class testController {
         songDao.update(song);
         playlistDAO.update(playlist);
 
->>>>>>> 82088e44d02616ffdcde798628b6bad11dff2457
+
     }
 }
