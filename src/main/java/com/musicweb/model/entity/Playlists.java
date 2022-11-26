@@ -85,7 +85,7 @@ public class Playlists implements java.io.Serializable {
 		this.decription = decription;
 	}
 
-	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "playlistses")
+	@ManyToMany(fetch = FetchType.EAGER, mappedBy = "playlistses")
 	public Set<Songs> getSongses() {
 		return this.songses;
 	}
