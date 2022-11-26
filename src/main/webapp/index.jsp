@@ -1,6 +1,5 @@
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-  <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@include file="jstlImport.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <!DOCTYPE html>
@@ -20,7 +19,7 @@
       <header>
         <div class="menu_side">
           <h1>
-            <a href="home">My <span>Music</span></a>
+            <a href="index">My <span>Music</span></a>
           </h1>
 
           <div class="playlist">
@@ -35,95 +34,20 @@
             </h4>
           </div>
            <c:if test="${!empty sessionScope.userid }">
-                     <ul class="menu_song">
+               <ul class="menu_song">
+            <c:forEach items="${userListSong}" var="song" varStatus="loop"> 
             <li class="songItem">
-              <a href="songdetail">
-                <span>01</span>
-                <img src="img/1.jpg" alt="" />
+              <a href="songdetail?songid=${song.getSongId()}">
+                <span>${loop.index }</span>
+                <img src="img/songImg/${song.getSongId()}.jpg" alt="" />
                 <h5>
-                  On My Way <br />
-                  <div class="subtitle">Alen Walker</div>
+                  ${song.getName()} <br />
+                  <div class="subtitle">${song.getSingers().getName() }</div>
                 </h5>
               </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+              <i class="bi playListPlay bi-play-circle-fill" id="${song.getSongId()}"></i>
             </li>
-            <li class="songItem">
-              <a href="songdetail">
-                <span>02</span>
-                <img src="img/2.jpg" alt="" />
-                <h5>
-                  On My Way <br />
-                  <div class="subtitle">Alen Walker</div>
-                </h5>
-              </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
-            </li>
-            <li class="songItem">
-              <a href="songdetail">
-                <span>03</span>
-                <img src="img/2.jpg" alt="" />
-                <h5>
-                  On My Way <br />
-                  <div class="subtitle">Alen Walker</div>
-                </h5>
-              </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
-            </li>
-            <li class="songItem">
-              <a href="songdetail">
-                <span>04</span>
-                <img src="img/2.jpg" alt="" />
-                <h5>
-                  On My Way <br />
-                  <div class="subtitle">Alen Walker</div>
-                </h5>
-              </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
-            </li>
-            <li class="songItem">
-              <a href="songdetail">
-                <span>05</span>
-                <img src="img/2.jpg" alt="" />
-                <h5>
-                  On My Way <br />
-                  <div class="subtitle">Alen Walker</div>
-                </h5>
-              </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
-            </li>
-            <li class="songItem">
-              <a href="songdetail">
-                <span>06</span>
-                <img src="img/2.jpg" alt="" />
-                <h5>
-                  On My Way <br />
-                  <div class="subtitle">Alen Walker</div>
-                </h5>
-              </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
-            </li>
-            <li class="songItem">
-              <a href="songdetail">
-                <span>07</span>
-                <img src="img/2.jpg" alt="" />
-                <h5>
-                  On My Way <br />
-                  <div class="subtitle">Alen Walker</div>
-                </h5>
-              </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-            </li>
-            <li class="songItem">
-              <a href="songdetail">
-                <span>08</span>
-                <img src="img/2.jpg" alt="" />
-                <h5>
-                  On My Way <br />
-                  <div class="subtitle">Alen Walker</div>
-                </h5>
-              </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-            </li>
+            </c:forEach>
           </ul>
             </c:if>
 
@@ -141,9 +65,9 @@
         <div class="song_side">
           <!--  -->
           <nav>
-            <form method="get" class="search" action="searchpage">
+            <form method="post" class="search" action="search">
               <i class="bi bi-search"></i>
-              <input name="input" type="text" placeholder="Search Music..." />
+              <input name="searchword" type="text" placeholder="Search Music..." />
               <button style="display:none" type="submit">Search</button>
             </form>
 
@@ -218,7 +142,7 @@
               <ul style="height:250px" class="item">
 	              <c:forEach items="${listSinger}" var="singer"> 
 					 <li>
-	                  <a style="text-decoration:none" href="singerpage">
+	                  <a style="text-decoration:none" href="singerdetail?singerid=${singer.getSingerId()}">
 	                    <img src="img/singerImg/${singer.getSingerId()}.jpg" alt="" />
 	                    <h5 style="padding: 5px 0px 0px 5px;line-height: 15px;font-size: 14px;width: 100px;margin-top: 8px; color: white">${singer.getName()}</h5>
 	                  </a>
@@ -271,10 +195,8 @@
         </div>
       </header>
 
-      <!-- <script src="app.js"></script> -->
       <script type="text/javascript">
             const songListJSON = JSON.parse(`${listSongResultJSON}`);
-          	
            	
            	$(document).ready(function () {
            	  let songs = []
