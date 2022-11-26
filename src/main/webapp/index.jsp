@@ -65,15 +65,11 @@
         <div class="song_side">
           <!--  -->
           <nav>
-<<<<<<< HEAD
+
             <form method="post" class="search" action="search">
               <i class="bi bi-search"></i>
               <input name="searchword" type="text" placeholder="Search Music..." />
-=======
-            <form method="get" class="search" action="search">
-              <i class="bi bi-search"></i>
-              <input type="text" placeholder="Search Music..." name = "searchValue" />
->>>>>>> 82088e44d02616ffdcde798628b6bad11dff2457
+
               <button style="display:none" type="submit">Search</button>
             </form>
 
