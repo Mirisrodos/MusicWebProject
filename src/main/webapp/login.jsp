@@ -19,7 +19,7 @@
         <form action="login" method="post">
             <div class="username-part">
                 <span>Enter your account</span>
-                <input type="text" placeholder="Email or Account" name="account"/>
+                <input type="email" placeholder="Email or Account" name="account"/>
             </div>
             <div class="password-part">
                 <span>Mật khẩu</span>

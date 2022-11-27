@@ -23,7 +23,7 @@
             </div>
             <div class="name-part">
                 <span>Account</span>
-                <input type="text" placeholder="Enter your account" name="useraccount"/>
+                <input type="email" placeholder="Enter your account" name="useraccount"/>
             </div>
             <div class="password-part">
                 <span>Password</span>

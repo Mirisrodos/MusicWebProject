@@ -1,31 +1,25 @@
 package com.musicweb.controller;
 
 import com.musicweb.model.dao.AlbumDAO;
-import com.musicweb.model.entity.Albums;
-import com.musicweb.model.entity.Playlists;
-import com.musicweb.model.entity.Singers;
-import com.musicweb.model.entity.Songs;
+import com.musicweb.model.dao.UserDAO;
+import com.musicweb.model.entity.*;
 
 import java.util.List;
 
 import com.musicweb.model.dao.SongDAO;
+import com.musicweb.util.SendEmailUtils;
 
 
 public class testApp {
     public static void main(String[] args) {
-        SongDAO songDao = new SongDAO();
-        AlbumDAO albumDAO = new AlbumDAO();
+        UserDAO userDAO = new UserDAO();
 
-//        List<Songs> songs = songDao.selectByUser(1);
+        Users user = new Users();
+        user.setName("hoa");
+        user.setAccount("truongthuanhoa23@gmai.com");
+        user.setPassword("123");
 
-//        Songs song = songDao.select(1);
+        userDAO.insert(user);
 
-//        Singers singers = song.getSingers();
-
-//        System.out.println(singers.getName());
-
-        Albums album = albumDAO.selectBySinger(1);
-
-        System.out.println(album.getDecription());
     }
 }

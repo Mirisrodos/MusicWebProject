@@ -2,6 +2,7 @@ package com.musicweb.controller;
 
 import com.musicweb.model.dao.UserDAO;
 import com.musicweb.model.entity.Users;
+import com.musicweb.util.SendEmailUtils;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -34,6 +35,10 @@ public class RegisterUserServlet extends HttpServlet {
 
     private void createAccount(HttpServletRequest request, HttpServletResponse response)
             throws Exception {
+        String text = "Thanks for joining our Website, here is an automatic email to confirm that your account is registered successfully. We will sent you coupons, vouchers and another discount via this email" +
+                ". Please not reply this email.";
+        String subject = "Thanks for registering my service";
+
         Users user = new Users();
         user.setName(request.getParameter("username"));
         user.setAccount(request.getParameter("useraccount"));
@@ -41,8 +46,9 @@ public class RegisterUserServlet extends HttpServlet {
 
         if (!registeredDAO.isExist(user.getAccount())) {
             registeredDAO.insert(user);
+//            Thiếu email để nhập
+            System.out.println(SendEmailUtils.sendEmail(user.getAccount(), subject, text));
             response.sendRedirect("login.jsp");
-//            response.sendRedirect("register.jsp");
         }
         else
         {
