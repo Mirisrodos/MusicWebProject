@@ -1,6 +1,8 @@
 package com.musicweb.controller;
 
+import com.musicweb.model.dao.PlaylistDAO;
 import com.musicweb.model.dao.UserDAO;
+import com.musicweb.model.entity.Playlists;
 import com.musicweb.model.entity.Users;
 import com.musicweb.util.SendEmailUtils;
 
@@ -13,10 +15,12 @@ import java.io.IOException;
 public class RegisterUserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserDAO registeredDAO = null;
+    private PlaylistDAO playlistDAO = null;
 
     @Override
     public void init() throws ServletException {
         registeredDAO = new UserDAO();
+        playlistDAO = new PlaylistDAO();
     }
 
     @Override
@@ -46,6 +50,10 @@ public class RegisterUserServlet extends HttpServlet {
 
         if (!registeredDAO.isExist(user.getAccount())) {
             registeredDAO.insert(user);
+
+            user = registeredDAO.selectByAccount(request.getParameter("useraccount"));
+            addPlaylist(user);
+
 //            Thiếu email để nhập
             System.out.println(SendEmailUtils.sendEmail(user.getAccount(), subject, text));
             response.sendRedirect("login.jsp");
@@ -54,6 +62,14 @@ public class RegisterUserServlet extends HttpServlet {
         {
             response.sendRedirect("register.jsp");
         }
+    }
+
+    private void addPlaylist(Users user){
+        Playlists playlist = new Playlists();
+        playlist.setUsers(user);
+        playlist.setName(user.getName());
+
+        playlistDAO.insert(playlist);
     }
 
     @Override

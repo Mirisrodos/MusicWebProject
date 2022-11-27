@@ -50,6 +50,7 @@ public class PlaylistDAO extends HibernateDAO<Playlists> implements GenericDAO<P
 		Songs sn = new Songs();
 
 		sn = sndao.select(songid);
+//		Loi select plid
 		pl = dao.select(plid);
 		songses = pl.getSongses();
 		playlistses = sn.getPlaylistses();
