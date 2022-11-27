@@ -158,7 +158,7 @@
 									</div></td>
 								<td><a href="">${song.getAlbums().getName()} </a></td>
 								<td>${song.getReleaseDate().toString()}</td>
-								<td><a href="removesong?songid=${song.getSongId()}"><i class="bi bi-x-lg"></i></a></td>
+								<td><a href="removesong?songid=${song.getSongId()}"><i class="bi bi-x-lg"></i></a></td> 
 							</tr>
 						</c:forEach>
 
@@ -189,7 +189,7 @@
 									</div></td>
 								<td style="width: 41%;"><a href="">${song.getAlbums().getName()}</a></td>
 								<td style="width: 16%;"><a
-									href="insertsong?songid=${song.getSongId()}">ADD</a></td>
+									href="insertsong?songid=${song.getSongId()}">ADD</a></td> 
 							</tr>
 						</c:forEach>
 
