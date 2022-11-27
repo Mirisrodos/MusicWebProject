@@ -35,15 +35,13 @@
 						href="playlist">Playlist</a>
 				</h4>
 
-				<h4 class="menu_link">
-					<span></span><i class="bi bi-music-note-beamed"></i><a href="">Library</a>
-				</h4>
+				
 			</div>
 			<c:if test="${!empty sessionScope.userid }">
 				<ul class="menu_song">
 					<c:forEach items="${userListSong}" var="song" varStatus="loop">
 						<li class="songItem"><a
-							href="songdetail?songid=${song.getSongId()}"> <span>${loop.index }</span>
+							href="songdetail?songid=${song.getSongId()}"> <span>${loop.count.toString()}</span>
 								<img src="img/songImg/${song.getSongId()}.jpg" alt="" />
 								<h5>
 									${song.getName()} <br />
@@ -165,7 +163,7 @@
 					</table>
 				</div>
 
-				<form method="post" class="search" action="search">
+				<!-- <form method="post" class="search" action="search">
 					<div class="music-search">
 						<h1>Look up for content of your playlist!</h1>
 						<div class="search">
@@ -173,13 +171,13 @@
 								placeholder="Tìm bài hát hoặc ALBUM" />
 						</div>
 					</div>
-				</form>
+				</form> -->
 
 				<div class="rec-pl">
 					<h1>RECOMMEND</h1>
 					<P class="rec-text">Base on what content inside this playlist</P>
 					<table>
-						<c:forEach items="${listSong}" var="song" begin="1" end="10">
+						<c:forEach items="${listSong}" var="song" begin="1" end="20">
 							<tr>
 								<td class="headersong"><img
 									src="img/songImg/${song.getSongId()}.jpg" alt="">
@@ -206,10 +204,10 @@
 					<div class="wave1"></div>
 				</div>
 				<!-- Icon kế bên wave nhưng không có ảnh được thay bằng border trắng -->
-				<img src="#" alt="" id="poster_master_play" />
+				<img src="img/singerImg/1.jpg" alt="" id="poster_master_play" />
 				<h5 id="title">
-					Vande mataram
-					<div class="subtitle">Bankim Chandra</div>
+					Alone
+					<div class="subtitle">Alan Walker</div>
 				</h5>
 			</div>
 			<div class="player">

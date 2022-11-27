@@ -26,9 +26,9 @@
                 <input type="password" placeholder="Password" name="password"/>
             </div>
             <div class="bottom-part">
-                <p>Forgot password?</p>
+                
                 <div class="function-bottom">
-                    <span><input type="checkbox"/> <label>Remember me</label></span>
+                    
                     <button>LOGIN</button>
                 </div>
             </div>
