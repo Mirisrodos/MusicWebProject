@@ -106,8 +106,9 @@
 
 							<div class="Fb61sprjhh75aOITDnsJ">
 								<span class="Type__TypeElement-goli3j-0 hWmToD"> <a
-									draggable="false" data-testid="creator-link" href="">OWNER: ${sessionScope.username}</a>
-								</span> 
+									draggable="false" data-testid="creator-link" href="">OWNER:
+										${sessionScope.username}</a>
+								</span>
 							</div>
 						</div>
 					</c:if>
@@ -151,13 +152,13 @@
 									<div>
 										<a href="songdetail?songid=${song.getSongId()}">
 											<p>${song.getName()}</p>
-										</a> <a href="singerdetail?singerid=${song.getSingers().getSingerId()}">
+										</a> <a
+											href="singerdetail?singerid=${song.getSingers().getSingerId()}">
 											${song.getSingers().getName()}</a>
 									</div></td>
-								<td>
-								<a href="">${song.getAlbums().getName()} </a></td>
-								<td>${song.getReleaseDate().toString()}</td> 
-								<td><button><i class="bi bi-x-lg"></i></button></td>
+								<td><a href="">${song.getAlbums().getName()} </a></td>
+								<td>${song.getReleaseDate().toString()}</td>
+								<td><a href="removesong?songid=${song.getSongId()}"><i class="bi bi-x-lg"></i></a></td>
 							</tr>
 						</c:forEach>
 
@@ -187,8 +188,8 @@
 										<a href="singerdetail">${song.getSingers().getName() }</a>
 									</div></td>
 								<td style="width: 41%;"><a href="">${song.getAlbums().getName()}</a></td>
-								<td style="width: 16%;"><input type="button" value="ADD">
-								</td>
+								<td style="width: 16%;"><a
+									href="insertsong?songid=${song.getSongId()}">ADD</a></td>
 							</tr>
 						</c:forEach>
 
