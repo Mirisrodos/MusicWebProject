@@ -68,7 +68,7 @@ public class Songs implements java.io.Serializable {
 		this.songId = songId;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "album_id", nullable = false)
 	public Albums getAlbums() {
 		return this.albums;

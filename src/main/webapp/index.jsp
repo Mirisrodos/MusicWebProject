@@ -1,203 +1,204 @@
-<%@include file="jstlImport.jsp" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="jstlImport.jsp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="./css/styles.css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-      <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-      <title>Music Website</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="./css/styles.css" />
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+	crossorigin="anonymous"></script>
+<title>Music Website</title>
+</head>
 
-    <body>
-      <header>
-        <div class="menu_side">
-          <h1>
-            <a href="index">My <span>Music</span></a>
-          </h1>
+<body>
+	<header>
+		<div class="menu_side">
+			<h1>
+				<a href="index">My <span>Music</span></a>
+			</h1>
 
-          <div class="playlist">
-            <h4 class="active menu_link">
-              <span></span><i class="bi bi-music-note-beamed"></i><a href="home">Home</a>
-            </h4>
-            <h4 class="menu_link">
-              <span></span><i class="bi bi-music-note-beamed"></i><a href="playlist">Playlist</a>
-            </h4>
-            <h4 class="menu_link">
-              <span></span><i class="bi bi-music-note-beamed"></i><a href="">Library</a>
-            </h4>
-          </div>
-           <c:if test="${!empty sessionScope.userid }">
-               <ul class="menu_song">
-            <c:forEach items="${userListSong}" var="song" varStatus="loop"> 
-            <li class="songItem">
-              <a href="songdetail?songid=${song.getSongId()}">
-                <span>${loop.index }</span>
-                <img src="img/songImg/${song.getSongId()}.jpg" alt="" />
-                <h5>
-                  ${song.getName()} <br />
-                  <div class="subtitle">${song.getSingers().getName() }</div>
-                </h5>
-              </a>
-              <i class="bi playListPlay bi-play-circle-fill" id="${song.getSongId()}"></i>
-            </li>
-            </c:forEach>
-          </ul>
-            </c:if>
+			<div class="playlist">
+				<h4 class="active menu_link">
+					<span></span><i class="bi bi-music-note-beamed"></i><a href="index">Home</a>
+				</h4>
+				<c:if test="${!empty sessionScope.userid }">
+					<h4 class="menu_link">
+						<span></span><i class="bi bi-music-note-beamed"></i><a
+							href="playlist">Playlist</a>
+					</h4>
+				</c:if>
+				<h4 class="menu_link">
+					<span></span><i class="bi bi-music-note-beamed"></i><a href="">Library</a>
+				</h4>
+			</div>
+			<c:if test="${!empty sessionScope.userid }">
+				<ul class="menu_song">
+					<c:forEach items="${userListSong}" var="song" varStatus="loop">
+						<li class="songItem"><a
+							href="songdetail?songid=${song.getSongId()}"> <span>${loop.index }</span>
+								<img src="img/songImg/${song.getSongId()}.jpg" alt="" />
+								<h5>
+									${song.getName()} <br />
+									<div class="subtitle">${song.getSingers().getName() }</div>
+								</h5>
+						</a> <i class="bi playListPlay bi-play-circle-fill"
+							id="${song.getSongId()}"></i></li>
+					</c:forEach>
+				</ul>
+			</c:if>
 
-            <c:if test="${empty sessionScope.userid }">
-              <div style="margin-top: 100px; margin-left: 20px; color:#4c5262;" class="need-to-login">
-              You need to 
-              <a style="color: #36e2ec ; text-decoration: none;" href="login">Login</a> 
-              or 
-              <a style="color: #36e2ec ; text-decoration: none; opacity: 0.7" href="registered">Register</a> 
-              first
-              </div>
-            </c:if>
-   
-        </div>
-        <div class="song_side">
-          <!--  -->
-          <nav>
+			<c:if test="${empty sessionScope.userid }">
+				<div style="margin-top: 100px; margin-left: 20px; color: #4c5262;"
+					class="need-to-login">
+					You need to <a style="color: #36e2ec; text-decoration: none;"
+						href="login">Login</a> or <a
+						style="color: #36e2ec; text-decoration: none; opacity: 0.7"
+						href="registered">Register</a> first
+				</div>
+			</c:if>
 
-            <form method="post" class="search" action="search">
-              <i class="bi bi-search"></i>
-              <input name="searchword" type="text" placeholder="Search Music..." />
+		</div>
+		<div class="song_side">
+			<!--  -->
+			<nav>
 
-              <button style="display:none" type="submit">Search</button>
-            </form>
+				<form method="post" class="search" action="search">
+					<i class="bi bi-search"></i> <input name="searchword" type="text"
+						placeholder="Search Music..." />
 
-            <c:if test="${!empty sessionScope.userid }">
-              <div class="user">
-                <span> 
-                  <a class="register logged" href="#">${sessionScope.username}</a> 
-                  <a class="login" href="logout">Logout</a>
-                </span>
-              </div>
-            </c:if>
+					<button style="display: none" type="submit">Search</button>
+				</form>
 
-            <c:if test="${empty sessionScope.userid }">
-              <div class="user">
-                <span>
-                  <a class="login" href="login">Login</a>
-                  <a class="register" href="registered">Register</a>
-                </span>
-              </div>
-            </c:if>
+				<c:if test="${!empty sessionScope.userid }">
+					<div class="user">
+						<span> <a class="register logged" href="#">${sessionScope.username}</a>
+							<a class="login" href="logout">Logout</a>
+						</span>
+					</div>
+				</c:if>
 
-          </nav>
+				<c:if test="${empty sessionScope.userid }">
+					<div class="user">
+						<span> <a class="login" href="login">Login</a> <a
+							class="register" href="registered">Register</a>
+						</span>
+					</div>
+				</c:if>
 
-          <!--  -->
-          <div class="main-scroll">
-            <div class="content">
-              <h1>Alan Walker-Faded</h1>
-              <p>
-                You were the shadow to my light. Did you feel us? Another star,
-                you fade away... <br />
-                Afraid our aim is out of sight, wanna see us?
-              </p>
-              <div class="buttons">
-                <button>PLAY</button>
-                <button>FOLLOW</button>
-              </div>
-            </div>
-            <div class="popular_song">
-              <div class="h4">
-                <h4>POPULAR SONG</h4>
-                <div class="btn_s">
-                  <i class="bi bi-arrow-left-short" id="pop_song_left"></i>
-                  <i class="bi bi-arrow-right-short" id="pop_song_right"></i>
-                </div>
-              </div>
-              <div class="pop_song">
-              	<c:forEach items="${listSong}" var="song"> 
-				 <li class="songItem">
-			
-                  <div class="img_play">
-                    <img src="img/2.jpg" alt="" />
-                    <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
-                  </div>
-                  <a style="text-decoration:none; color:white" href="songdetail?songid=${song.getSongId()}">
-                  <h5 style="overflow:unset">
-                    On My Way<br />
-                    <div class="subtitle">Alen Walker</div>
-                  </h5>
-                  </a>
-                </li>
-				</c:forEach>
-               </div>
-            </div>
-            <div class="popular_artists">
-              <div class="h4">
-                <h4>SINGER</h4>
-                <div class="btn_s">
-                  <i class="bi bi-arrow-left-short" id="pop_art_left"></i>
-                  <i class="bi bi-arrow-right-short" id="pop_art_right"></i>
-                </div>
-              </div>
-              <ul style="height:250px" class="item">
-	              <c:forEach items="${listSinger}" var="singer"> 
-					 <li>
-	                  <a style="text-decoration:none" href="singerdetail?singerid=${singer.getSingerId()}">
-	                    <img src="img/singerImg/${singer.getSingerId()}.jpg" alt="" />
-	                    <h5 style="padding: 5px 0px 0px 5px;line-height: 15px;font-size: 14px;width: 100px;margin-top: 8px; color: white">${singer.getName()}</h5>
-	                  </a>
-                	</li>
-				  </c:forEach>
-                
-              </div>
-            </div>
-          </div>
-        </div>
+			</nav>
 
-        <div class="master_play">
-          <div class="song_detail">
-            <div class="wave" id="wave">
-              <div class="wave1"></div>
-              <div class="wave1"></div>
-              <div class="wave1"></div>
-            </div>
-            <!-- Icon káº¿ bÃªn wave nhÆ°ng khÃ´ng cÃ³ áº£nh ÄÆ°á»£c thay báº±ng border tráº¯ng -->
-            <img src="#" alt="" id="poster_master_play" />
-            <h5 id="title">
-              Vande mataram
-              <div class="subtitle">Bankim Chandra</div>
-            </h5>
-          </div>
-          <div class="player">
-            <div class="icon">
-              <i class="bi Shuffle bi-music-note-beamed">next</i>
-              <i class="bi bi-skip-start-fill" id="back"></i>
-              <i class="bi bi-play-fill" id="masterPlay"></i>
-              <i class="bi bi-skip-end-fill" id="next"></i>
-              <i class="bi bi-cloud-arrow-down-fill" id="download_music"></i>
-            </div>
-            <div class="player-bar">
-              <span id="currentStart">0:00</span>
-              <div class="bar">
-                <input type="range" id="seek" min="0" max="100" />
-                <div class="bar2" id="bar2"></div>
-                <div class="dot"></div>
-              </div>
-              <span id="currentEnd">0:30</span>
-            </div>
-          </div>
-          <div class="vol">
-            <i class="bi bi-volume-up-fill" id="vol_icon"></i>
-            <input type="range" min="0" max="100" id="vol" />
-            <div class="vol_bar"></div>
-            <div class="dot" id="vol_dot"></div>
-          </div>
-        </div>
-      </header>
+			<!--  -->
+			<div class="main-scroll">
+				<div class="content">
+					<h1>Alan Walker-Faded</h1>
+					<p>
+						You were the shadow to my light. Did you feel us? Another star,
+						you fade away... <br /> Afraid our aim is out of sight, wanna see
+						us?
+					</p>
+					<div class="buttons">
+						<button>PLAY</button>
+						<button>FOLLOW</button>
+					</div>
+				</div>
+				<div class="popular_song">
+					<div class="h4">
+						<h4>POPULAR SONG</h4>
+						<div class="btn_s">
+							<i class="bi bi-arrow-left-short" id="pop_song_left"></i> <i
+								class="bi bi-arrow-right-short" id="pop_song_right"></i>
+						</div>
+					</div>
+					<div class="pop_song">
+						<c:forEach items="${listSong}" var="song">
+							<li class="songItem">
 
-      <script type="text/javascript">
+								<div class="img_play">
+									<img src="img/2.jpg" alt="" /> <i
+										class="bi playListPlay bi-play-circle-fill" id="9"></i>
+								</div> <a style="text-decoration: none; color: white"
+								href="songdetail?songid=${song.getSongId()}">
+									<h5 style="overflow: unset">
+										On My Way<br />
+										<div class="subtitle">Alen Walker</div>
+									</h5>
+							</a>
+							</li>
+						</c:forEach>
+					</div>
+				</div>
+				<div class="popular_artists">
+					<div class="h4">
+						<h4>SINGER</h4>
+						<div class="btn_s">
+							<i class="bi bi-arrow-left-short" id="pop_art_left"></i> <i
+								class="bi bi-arrow-right-short" id="pop_art_right"></i>
+						</div>
+					</div>
+					<ul style="height: 250px" class="item">
+						<c:forEach items="${listSinger}" var="singer">
+							<li><a style="text-decoration: none"
+								href="singerdetail?singerid=${singer.getSingerId()}"> <img
+									src="img/singerImg/${singer.getSingerId()}.jpg" alt="" />
+									<h5
+										style="padding: 5px 0px 0px 5px; line-height: 15px; font-size: 14px; width: 100px; margin-top: 8px; color: white">${singer.getName()}</h5>
+							</a></li>
+						</c:forEach>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="master_play">
+			<div class="song_detail">
+				<div class="wave" id="wave">
+					<div class="wave1"></div>
+					<div class="wave1"></div>
+					<div class="wave1"></div>
+				</div>
+				<!-- Icon káº¿ bÃªn wave nhÆ°ng khÃ´ng cÃ³ áº£nh ÄÆ°á»£c thay báº±ng border tráº¯ng -->
+				<img src="#" alt="" id="poster_master_play" />
+				<h5 id="title">
+					Vande mataram
+					<div class="subtitle">Bankim Chandra</div>
+				</h5>
+			</div>
+			<div class="player">
+				<div class="icon">
+					<i class="bi Shuffle bi-music-note-beamed">next</i> <i
+						class="bi bi-skip-start-fill" id="back"></i> <i
+						class="bi bi-play-fill" id="masterPlay"></i> <i
+						class="bi bi-skip-end-fill" id="next"></i> <i
+						class="bi bi-cloud-arrow-down-fill" id="download_music"></i>
+				</div>
+				<div class="player-bar">
+					<span id="currentStart">0:00</span>
+					<div class="bar">
+						<input type="range" id="seek" min="0" max="100" />
+						<div class="bar2" id="bar2"></div>
+						<div class="dot"></div>
+					</div>
+					<span id="currentEnd">0:30</span>
+				</div>
+			</div>
+			<div class="vol">
+				<i class="bi bi-volume-up-fill" id="vol_icon"></i> <input
+					type="range" min="0" max="100" id="vol" />
+				<div class="vol_bar"></div>
+				<div class="dot" id="vol_dot"></div>
+			</div>
+		</div>
+	</header>
+
+	<script type="text/javascript">
             const songListJSON = JSON.parse(`${listSongResultJSON}`);
            	
            	$(document).ready(function () {
@@ -507,7 +508,7 @@
            	});
 
     </script>
-    </body>
+</body>
 
-  
+
 </html>
