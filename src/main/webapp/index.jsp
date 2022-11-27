@@ -58,7 +58,7 @@
 			<c:if test="${empty sessionScope.userid }">
 				<div style="margin-top: 100px; margin-left: 20px; color: #4c5262;"
 					class="need-to-login">
-					You need to <a style="color: #36e2ec; text-decoration: none;"
+					Getting started by <a style="color: #36e2ec; text-decoration: none;"
 						href="login">Login</a> or <a
 						style="color: #36e2ec; text-decoration: none; opacity: 0.7"
 						href="registered">Register</a> first

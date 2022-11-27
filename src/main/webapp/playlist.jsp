@@ -155,7 +155,7 @@
 											${song.getSingers().getName()}</a>
 									</div></td>
 								<td>
-								<a href="">${song.getAlbums().getName()}</a></td>
+								<a href="">${song.getAlbums().getName()} </a></td>
 								<td>${song.getReleaseDate().toString()}</td> 
 								<td><button><i class="bi bi-x-lg"></i></button></td>
 							</tr>

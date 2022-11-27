@@ -95,7 +95,7 @@
           <div class="search-result">
 			
             <div class="no1search">
-              <h2>Kết Quả Tìm Kiếm Hàng Đầu</h2>
+              <h2>Top Result</h2>
               <c:if test="${!songList.isEmpty()}"> 
 	              <div class="song-image" >
 	               <img src="./img/songImg/${firstSong.getSongId()}.jpg">
@@ -104,16 +104,16 @@
 	              <h1></h1>
 	              <div class="song-info">
 	                <span class="singer-name">${firstSong.getSingers().getName()}</span>
-	                <span class="type">BaÌi HaÌt</span>
+	                <span class="type">Song</span>
 	              </div>
 	              <i style="background-color: transparent; font-size:50px; color: #36e2ec" class="bi playListPlay bi-play-circle-fill play-btn" id="${firstSong.getSongId() }"></i>
               </c:if>
               <c:if test="${songList.isEmpty()}"> 
-              	<div style="margin:auto; opacity: 0.7">Không tìm thấy bài hát</div>
+              	<div style="margin:auto; opacity: 0.7">Not Found!</div>
               </c:if>
             </div>
             <div class="searched-list">
-              <h2>Bài Hát</h2>
+              <h2>Song</h2>
               <c:if test="${!songList.isEmpty()}"> 
 	              <ul style="height: 230px; overflow:hidden">
 	              <c:forEach items="${songList}" var="song"> 
@@ -149,7 +149,7 @@
 	              </ul>
               </c:if>
               <c:if test="${songList.isEmpty()}">
-              <div style="margin:auto; opacity: 0.7; height: 230px; overflow:hidden">Không tìm thấy bài hát</div> 
+              <div style="margin:auto; opacity: 0.7; height: 230px; overflow:hidden">Not Found!</div> 
               </c:if>
             </div>
 

@@ -95,7 +95,7 @@
             <div class="info">
               <div>
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Nghệ sĩ đã được xác minh</span>
+                <span>Authorized Author</span>
               </div>
               <h1>${singerDetail.getName()}</h1>
               <div>${singerDetail.getDecription()}</div>
@@ -115,10 +115,10 @@
             <input class="checkfollow--checked" type="checkbox" name="checkfollow" id="checkfollow" hidden>
 
             <label class="follow follow--check" for="checkfollow">
-              <div>Đang Theo Dõi</div>
+              <div>Following</div>
             </label>
             <label class="follow" for="checkfollow">
-              <div>Theo Dõi</div>
+              <div>Follow</div>
             </label>
 
             <button class="three-btn">
@@ -131,7 +131,7 @@
           </div>
 
           <div class="music-list">
-            <div class="label-list">Phổ Biến</div>
+            <div class="label-list">Polular</div>
             <table style="margin:auto">
             <c:forEach items="${listSong}" var="song"> 
 				<tr style="position:relative">

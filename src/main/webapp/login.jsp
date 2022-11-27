@@ -18,18 +18,18 @@
         <h1>LOGIN</h1>
         <form action="login" method="post">
             <div class="username-part">
-                <span>Địa chỉ email hoặc tên người dùng</span>
-                <input type="text" placeholder="Địa chỉ email hoặc tên người dùng" name="account"/>
+                <span>Enter your account</span>
+                <input type="text" placeholder="Email or Account" name="account"/>
             </div>
             <div class="password-part">
                 <span>Mật khẩu</span>
-                <input type="password" placeholder="Mật khẩu" name="password"/>
+                <input type="password" placeholder="Password" name="password"/>
             </div>
             <div class="bottom-part">
-                <p>Quên mật khẩu của bạn ?</p>
+                <p>Forgot password?</p>
                 <div class="function-bottom">
-                    <span><input type="checkbox"/> <label>Hãy nhớ tôi</label></span>
-                    <button>ĐĂNG NHẬP</button>
+                    <span><input type="checkbox"/> <label>Remember me</label></span>
+                    <button>LOGIN</button>
                 </div>
             </div>
         </form>

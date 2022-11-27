@@ -19,25 +19,25 @@
         <form action="registered" method="post">
             <div class="username-part">
                 <span>Name</span>
-                <input type="text" placeholder="Nhập tên của bạn" name="username"/>
+                <input type="text" placeholder="Enter your name" name="username"/>
             </div>
             <div class="name-part">
                 <span>Account</span>
-                <input type="text" placeholder="Nhập tên tài khoản của bạn" name="useraccount"/>
+                <input type="text" placeholder="Enter your account" name="useraccount"/>
             </div>
             <div class="password-part">
                 <span>Password</span>
-                <input type="password" placeholder="Mật khẩu" name="userpassword"/>
+                <input type="password" placeholder="Enter your password" name="userpassword"/>
             </div>
             <div class="re-password-part">
                 <span>Retype Password</span>
-                <input type="password" placeholder="Nhập lại mật khẩu" name="passwordconfirm"/>
+                <input type="password" placeholder="Retype your password" name="passwordconfirm"/>
             </div>
             <div class="bottom-part">
 
                 <div class="function-bottom">
                     <span></span>
-                    <button type="submit" value="submit">ÄÄNG KYÌ</button>
+                    <button type="submit" value="submit">REGISTER</button>
                 </div>
             </div>
         </form>

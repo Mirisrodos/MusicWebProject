@@ -28,6 +28,7 @@
 .main-scroll .playlist-content .info a {
     color: white;
     text-decoration: none;
+    transition: all 0.5s;
 }
 
 
@@ -148,6 +149,9 @@ header .music-list button {
 }
 header .music-list button:hover {
     background-color: red;
+    cursor: pointer;
+}
+header .music-list button i:hover {
     color: white;
 }
 header .music-list button i {
@@ -267,6 +271,7 @@ header .rec-pl table input {
     color: #fff;
     font-weight: bold;
     box-sizing: border-box;
+    transition: all 0.5s;
 }
 
 header .rec-pl table input:hover {
