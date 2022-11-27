@@ -137,10 +137,10 @@
 					<table>
 						<tr>
 							<th>#</th>
-							<th>TIÊU ĐỀ</th>
+							<th>TITLE</th>
 							<th>ALBUM</th>
-							<th>NGÀY THÊM</th>
-							<th><i class="bi bi-clock"></i></th>
+							<th>ADDED DATE</th>
+							<th><i class="bi bi-flag-fill"></i></th>
 						</tr>
 
 						<c:forEach items="${userListSong}" var="song" varStatus="loop">
@@ -156,8 +156,8 @@
 									</div></td>
 								<td>
 								<a href="">${song.getAlbums().getName()}</a></td>
-								<td>${song.getReleaseDate().toString()}</td>
-								<td><button>DELETE</button></td>
+								<td>${song.getReleaseDate().toString()}</td> 
+								<td><button><i class="bi bi-x-lg"></i></button></td>
 							</tr>
 						</c:forEach>
 
@@ -186,7 +186,7 @@
 										<p>${song.getName()}</p>
 										<a href="singerdetail">${song.getSingers().getName() }</a>
 									</div></td>
-								<td style="width: 41%;"><a href="">Animu</a></td>
+								<td style="width: 41%;"><a href="">${song.getAlbums().getName()}</a></td>
 								<td style="width: 16%;"><input type="button" value="ADD">
 								</td>
 							</tr>
