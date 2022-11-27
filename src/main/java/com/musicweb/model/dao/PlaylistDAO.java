@@ -93,19 +93,19 @@ public class PlaylistDAO extends HibernateDAO<Playlists> implements GenericDAO<P
 
 				songses.remove(son);
 				for (Playlists ply : playlistses) {
-					if (ply.getPlaylistId() == plid) 
+					if (ply.getPlaylistId() == plid) {
 						playlistses.remove(ply);
+
+						pl.setSongses(songses);
+						sn.setPlaylistses(playlistses);
+
+						dao.update(pl);
+						sndao.update(sn);
+						return 1;
+					}
 				}
-
-				pl.setSongses(songses);
-				sn.setPlaylistses(playlistses);
-
-				dao.update(pl);
-				sndao.update(sn);
-				return 1;
 			}
 		}
-
 		return 0;
 	}
 
