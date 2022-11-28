@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
-
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory>
-		<property name="hbm2ddl.auto">validate</property>
-		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_6206d67ecbf53a3</property>
-		<property name="hibernate.connection.username">b666e000c034c7</property>
-		<property name="hibernate.connection.password">2f10cf3d</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		
-		<!-- Connection pool -->
-		<property name="connection.pool_size">100</property>
-		
-		<!-- Show SQL -->
-		<property name="show_sql">true</property>
-
-		<!-- Specifying Session Context -->
-		<property name="hibernate.current_session_context_class">thread</property>
-		
-		<!-- Mapping -->
-		<mapping class="com.musicweb.model.entity.Users"></mapping>
-		<mapping class="com.musicweb.model.entity.Singers"></mapping>
-		<mapping class="com.musicweb.model.entity.Songs"></mapping>
-		<mapping class="com.musicweb.model.entity.Albums"></mapping>
-		<mapping class="com.musicweb.model.entity.Playlists"></mapping>
-		
-	</session-factory>
+ <session-factory name="DemoHibernate">
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">2f10cf3d</property>
+  <property name="hibernate.connection.url">jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_6206d67ecbf53a3</property>
+  <property name="hibernate.connection.username">b666e000c034c7</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+ </session-factory>
 </hibernate-configuration>

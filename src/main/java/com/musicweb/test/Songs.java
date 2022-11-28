@@ -1,4 +1,4 @@
-package com.musicweb.model.entity;
+package com.musicweb.test;
 // Generated Nov 28, 2022, 2:06:03 PM by Hibernate Tools 4.3.6.Final
 
 import java.util.Date;

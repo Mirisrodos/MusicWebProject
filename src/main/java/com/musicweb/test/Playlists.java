@@ -1,4 +1,4 @@
-package com.musicweb.model.entity;
+package com.musicweb.test;
 
 
 import java.util.HashSet;
