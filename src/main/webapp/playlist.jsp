@@ -145,7 +145,11 @@
 						<c:forEach items="${userListSong}" var="song" varStatus="loop">
 							<tr>
 								<td class="numbers">${loop.count.toString()}</td>
-								<td class="headersong"><img
+								<td class="headersong" style="position:relative"; >
+								<i style="position:absolute;top: 50%;left:10px; transform: translateY(-50%); padding:15px 15px; background-color: rgba(0,0,0,.2)"
+										class="bi playListPlay bi-play-circle-fill play-btn"
+										id="${song.getSongId() }"></i>
+								<img
 									src="img/songImg/${song.getSongId()}.jpg" alt="">
 									<div>
 										<a href="songdetail?songid=${song.getSongId()}">
@@ -153,7 +157,8 @@
 										</a> <a
 											href="singerdetail?singerid=${song.getSingers().getSingerId()}">
 											${song.getSingers().getName()}</a>
-									</div></td>
+									</div>
+									</td>
 								<td><a href="">${song.getAlbums().getName()} </a></td>
 								<td>${song.getReleaseDate().toString()}</td>
 								<td><a href="removesong?songid=${song.getSongId()}"><i class="bi bi-x-lg"></i></a></td> 
@@ -186,8 +191,8 @@
 										<a href="singerdetail">${song.getSingers().getName() }</a>
 									</div></td>
 								<td style="width: 41%;"><a href="">${song.getAlbums().getName()}</a></td>
-								<td style="width: 16%;"><a
-									href="insertsong?songid=${song.getSongId()}">ADD</a></td> 
+								<td style="width: 16%;">
+								<a href="insertsong?songid=${song.getSongId()}">ADD</a></td> 
 							</tr>
 						</c:forEach>
 
