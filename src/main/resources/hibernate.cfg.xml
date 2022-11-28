@@ -9,5 +9,11 @@
   <property name="hibernate.connection.username">b666e000c034c7</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <property name="hibernate.show_sql">true</property>
+
+  <mapping class="com.musicweb.model.entity.Users"></mapping>
+  <mapping class="com.musicweb.model.entity.Singers"></mapping>
+  <mapping class="com.musicweb.model.entity.Songs"></mapping>
+  <mapping class="com.musicweb.model.entity.Albums"></mapping>
+  <mapping class="com.musicweb.model.entity.Playlists"></mapping>
  </session-factory>
 </hibernate-configuration>
