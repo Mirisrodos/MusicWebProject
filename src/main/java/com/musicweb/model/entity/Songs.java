@@ -62,7 +62,7 @@ public class Songs implements java.io.Serializable {
 		this.songId = songId;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "album_id", nullable = false)
 	public Albums getAlbums() {
 		return this.albums;
@@ -72,7 +72,7 @@ public class Songs implements java.io.Serializable {
 		this.albums = albums;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "singer_id", nullable = false)
 	public Singers getSingers() {
 		return this.singers;
@@ -101,7 +101,7 @@ public class Songs implements java.io.Serializable {
 		this.releaseDate = releaseDate;
 	}
 
-	@ManyToMany(fetch = FetchType.LAZY)
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "playlists_songs", catalog = "heroku_6206d67ecbf53a3", joinColumns = {
 			@JoinColumn(name = "song_id", nullable = false, updatable = false) }, inverseJoinColumns = {
 					@JoinColumn(name = "playlist_id", nullable = false, updatable = false) })
