@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="DemoHibernate">
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Diver</property>
+  <property name="hibernate.connection.password">c0ffba7b</property>
+  <property name="hibernate.connection.username">b037d70d1040b6</property>
+  <property name="hibernate.default_schema">us-cdbr-east-06.cleardb.net/heroku_c192f9cd2f70d8a</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+ </session-factory>
+</hibernate-configuration>

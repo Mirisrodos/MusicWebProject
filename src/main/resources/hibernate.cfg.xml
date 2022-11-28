@@ -4,9 +4,9 @@
 <hibernate-configuration>
  <session-factory name="DemoHibernate">
   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-  <property name="hibernate.connection.password">2f10cf3d</property>
-  <property name="hibernate.connection.url">jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_6206d67ecbf53a3</property>
-  <property name="hibernate.connection.username">b666e000c034c7</property>
+  <property name="hibernate.connection.password">EokRn1lVC9</property>
+  <property name="hibernate.connection.url">jdbc:mysql://remotemysql.com:3306/B71AuRGuH9</property>
+  <property name="hibernate.connection.username">B71AuRGuH9</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <property name="hibernate.show_sql">true</property>
 
