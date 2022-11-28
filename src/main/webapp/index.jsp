@@ -98,7 +98,7 @@
 							</p>
 							<div class="buttons">
 								<a href="https://team1-ebon.vercel.app/#about" target="_blank">VISIT OUR WEBSITE</a>
-								<a href="">PLAY SOME SONG</a>
+								<a href="#" class="bi playListPlay bi-play-circle-fill" id="20"> PLAY SOME SONG</a> 
 							</div>
 						</div>
 						<div class="popular_song">

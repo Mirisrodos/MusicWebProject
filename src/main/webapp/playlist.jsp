@@ -100,7 +100,7 @@
 					<c:if test="${!empty sessionScope.userid }">
 						<div class="info">
 							<p>PLAYLIST</p>
-							<h1>DANH SÁCH PHÁT CỦA TÔI #1</h1>
+							<h1>MY FAVOURITE SONGS PLAYLIST</h1>
 
 							<div class="Fb61sprjhh75aOITDnsJ">
 								<span class="Type__TypeElement-goli3j-0 hWmToD"> <a
